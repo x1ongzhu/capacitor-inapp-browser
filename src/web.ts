@@ -3,8 +3,13 @@ import { WebPlugin } from '@capacitor/core';
 import type { InAppBrowserPlugin } from './definitions';
 
 export class InAppBrowserWeb extends WebPlugin implements InAppBrowserPlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  async open(options: { url: string; title?: string }): Promise<void> {
+    // TODO:
+  }
+  async close(): Promise<void> {
+    // TODO:
+  }
+  async postMessage(options: any): Promise<void> {
+    // TODO:
   }
 }

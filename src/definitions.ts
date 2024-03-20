@@ -1,3 +1,5 @@
 export interface InAppBrowserPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  open(options: { url: string; title?: string }): Promise<void>;
+  close(): Promise<void>;
+  postMessage(options: any): Promise<void>;
 }
